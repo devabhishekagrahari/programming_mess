@@ -1,8 +1,6 @@
 package dev.abhishekagrahari.programming_mess.view
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.*
@@ -16,15 +14,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontFamily
-
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 
 @Composable
 fun cppUiView(
     title: String,
     description: String,
     inputCodeSnippet: String,
-    outputCodeSnippet: String
+    outputCodeSnippet: String,
+    navController: NavHostController
 ) {
     // State for input and output
     var programOutput by remember { mutableStateOf("Output will appear here") }
