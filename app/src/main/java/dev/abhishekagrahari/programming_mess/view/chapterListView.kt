@@ -22,19 +22,27 @@ import androidx.navigation.NavController
 
 val chapterList = listOf(
     chapterData(
-        title = "Introduction to C++",
-        description = "Learn the basics of C++ programming, including its history and uses.",
-        inputCodeSnippet = """
-            #include <iostream>
-            using namespace std;
+            title = "Introduction to C++",
+    description = """
+        C++ is a powerful, general-purpose programming language created by Bjarne Stroustrup in the 1980s. 
+        It extends the C language by adding object-oriented features like classes and objects, 
+        enabling developers to write efficient and flexible code. C++ is widely used for developing system software, 
+        game engines, applications requiring high-performance computation, and more.
+         This chapter introduces the fundamentals of C++, including its syntax, key features, and basic structure. 
+         Understanding C++ is essential for anyone interested in low-level programming and high-performance applications, 
+         as it provides full control over system resources and memory management.
+    """.trimIndent(),
+    inputCodeSnippet = """
+        #include <iostream>
+        using namespace std;
 
-            int main() {
-                cout << "Hello, World!";
-                return 0;
-            }
-        """.trimIndent(),
-        outputCodeSnippet = "Hello, World!",
-        route = "introduction"
+        int main() {
+            cout << "Hello, World!";
+            return 0;
+        }
+    """.trimIndent(),
+    outputCodeSnippet = "Hello, World!",
+    route = "introduction"
     ),
     chapterData(
         title = "Basic Syntax and Structure",

@@ -40,6 +40,14 @@ android {
 }
 
 dependencies { val nav_version = "2.8.5"
+    // Compose Material 3 library
+    implementation("androidx.compose.material3:material3:1.2.0")
+    implementation("androidx.compose.material:material-icons-core:1.5.1")
+    implementation("androidx.compose.material:material-icons-extended:1.5.1")
+
+    // Material Icons
+    implementation("androidx.compose.material:material-icons-core:1.5.1")
+    implementation("androidx.compose.material:material-icons-extended:1.5.1")
 
     // Jetpack Compose integration
     implementation("androidx.navigation:navigation-compose:$nav_version")

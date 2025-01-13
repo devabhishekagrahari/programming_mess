@@ -6,7 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 
 import androidx.navigation.compose.rememberNavController
-import dev.abhishekagrahari.programming_mess.navigation.navigationGraph
+import dev.abhishekagrahari.programming_mess.navigation.NavigationGraph
+
 
 
 class MainActivity : ComponentActivity() {
@@ -14,7 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-           navigationGraph(navController = rememberNavController())
+           NavigationGraph(navController = rememberNavController())
         }
     }
 }

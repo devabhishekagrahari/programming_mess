@@ -14,15 +14,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontFamily
-import androidx.navigation.NavHostController
+
 
 @Composable
-fun cppUiView(
-    title: String,
+fun CppUiView(
     description: String,
     inputCodeSnippet: String,
     outputCodeSnippet: String,
-    navController: NavHostController
 ) {
     // State for input and output
     var programOutput by remember { mutableStateOf("Output will appear here") }
@@ -35,27 +33,21 @@ fun cppUiView(
         horizontalAlignment = Alignment.Start
     ) {
 
-        // Title
-        Text(
-            text = title,
-            style = TextStyle(
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center
-            ),
-            modifier = Modifier.padding(bottom = 8.dp)
-        )
+
 
         // Description
         Text(
             text = description,
             style = TextStyle(
-                fontSize = 16.sp,
-                fontWeight = FontWeight.Normal,
-                color = Color.Gray,
-                lineHeight = 22.sp
+                fontSize = 14.sp,
+                fontFamily = FontFamily.Monospace,
+                color = Color(0xFF1E88E5),
+                lineHeight = 20.sp
             ),
-            modifier = Modifier.padding(bottom = 16.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(0xFFF5F5F5))
+                .padding(12.dp)
         )
 
         // User Input Field
