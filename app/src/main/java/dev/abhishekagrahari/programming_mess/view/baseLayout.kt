@@ -24,7 +24,7 @@ import kotlinx.coroutines.coroutineScope
 fun BaseLayout(
     navController: NavController ,
     drawerState: DrawerState = rememberDrawerState(DrawerValue.Closed),
-    title: String = "Learn About C++",
+    title: String = "Learn C++ (Beginner to Advanced)",
     content: @Composable () -> Unit,
 ) {
     val primaryColor = Color(0xFF6200EA) // Custom Primary Color
@@ -39,7 +39,7 @@ fun BaseLayout(
             .fillMaxSize(),
         drawerContent = {
             if(drawerState.isOpen){
-                Spacer(modifier= Modifier.height(32.dp))
+                Spacer(modifier= Modifier.height(32.dp).background(Color(0xFF143854)))
             DrawerContent(navController = navController, coroutineScope = coroutineScope, drawerState = drawerState)
         }
         }
@@ -89,7 +89,7 @@ fun BaseLayout(
 
 @Composable
 fun DrawerContent(navController: NavController,coroutineScope: CoroutineScope , drawerState: DrawerState) {
-    Column(modifier = Modifier.padding(top =50.dp).background(Color.White).fillMaxSize()) {
+    Column(modifier = Modifier.padding(top =50.dp).background(Color(0xFFE3F2FD)).fillMaxSize()) {
         DrawerItem(
             coroutineScope = coroutineScope,
             text = "Homepage",
@@ -127,6 +127,10 @@ fun DrawerItem(text: String, coroutineScope: CoroutineScope , navController: Nav
                     drawerState.close()
                 }
             },
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White,
+            contentColor = Color.Black
+        ),
         shape = MaterialTheme.shapes.medium,
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {

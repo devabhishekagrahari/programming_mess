@@ -57,14 +57,6 @@ fun AboutUsScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Additional information or button can be added here
-        Button(
-            onClick = { /* Handle the click */ },
-            modifier = Modifier.fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(containerColor = primaryColor)
-        ) {
-            Text(text = "Join Us", color = Color.White)
-        }
     }
 }
 

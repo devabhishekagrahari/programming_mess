@@ -35,29 +35,23 @@ fun ContactUsScreen() {
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .background(Color(0xFFF2F4F7)),
+            .background(Color(0xFFE3F2FD)),
         horizontalAlignment = Alignment.Start
     ) {
 
         // Contact Information Cards
-        ContactItem("Phone", "+123 456 7890", Icons.Filled.Phone)
 
-        ContactItem("Email", "contact@programmingmess.com", Icons.Filled.Email)
 
-        ContactItem("Address", "123, Programming Mess Street, City, Country", Icons.Filled.LocationOn)
+        ContactItem("Email", "devabhishekagrahari@gmail.com", Icons.Filled.Email)
 
-        ContactItem("Social Media", "@programming_mess", Icons.Filled.Public)
+        ContactItem("Address", "Atif Vihar , Uattardhona , Uttar Pradesh 226028, India ", Icons.Filled.LocationOn)
+
+        ContactItem("Instagram", "@abhishek.a.grahari", Icons.Filled.Public)
+        ContactItem("Linked In", "/in/devabhishekagrahari/" , Icons.Filled.Public)
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Additional information or button can be added below
-        Button(
-            onClick = { /* Handle the click */ },
-            modifier = Modifier.fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(containerColor = primaryColor)
-        ) {
-            Text(text = "Reach Out", color = Color.White)
-        }
+
     }
 }
 
@@ -69,6 +63,10 @@ fun ContactItem(label: String, value: String, icon: ImageVector) {
             .padding(8.dp)
             .clickable { /* Handle click event here */ },
         shape = MaterialTheme.shapes.medium,
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White,
+            contentColor = Color.Black
+        ),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
         Row(
